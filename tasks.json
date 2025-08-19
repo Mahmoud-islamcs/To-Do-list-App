@@ -5,7 +5,7 @@
         "description": "Solve 5 problems on Codeforces",
         "due_date": "2025-08-19",
         "due_time": "06:00",
-        "status": "Pending"
+        "status": "Completed"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "Solve Linked List Problems ",
         "due_date": "2025-08-19",
         "due_time": "14:00",
-        "status": "Pending"
+        "status": "Completed"
     },
     {
         "id": 3,
