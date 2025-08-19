@@ -45,16 +45,7 @@
   </head>
   <body>
     <div class="container mt-4">
-      <h1
-        class="text-center mb-4"
-        style="
-          font-family: Arial, sans-serif;
-          font-size: 80px;
-          font-weight: bold;
-        "
-      >
-        Taskify
-      </h1>
+      <h1 class="main-title">Taskify</h1>
 
       <div class="row text-center mb-4">
         <div class="col-md-4">
@@ -84,7 +75,8 @@
       </div>
 
       <div class="mb-4">
-        <label class="form-label fw-bold">Progress</label>
+        <label class="form-label progress-label">Progress</label>
+
         <div class="progress">
           <div
             id="progress-bar"
@@ -110,10 +102,10 @@
       </div>
       {% endif %}
 
-      <!-- Task List -->
       <div class="d-flex justify-content-between mb-3">
-        <h3>Your Tasks</h3>
-        <a href="/add" class="btn btn-primary">Add Task</a>
+        <h3 class="section-title">Your Tasks</h3>
+
+        <a href="/add" class="btn-custom">Add Task</a>
       </div>
 
       <ul class="list-group">
@@ -124,28 +116,21 @@
           <div>
             <a
               href="/task/{{ task.id }}"
-              class="fw-bold {% if task.status == 'Completed' %}text-decoration-line-through text-success{% endif %}"
+              class="task-link {% if task.status == 'Completed' %}completed{% endif %}"
             >
               {{ task.name }}
             </a>
+
             <small class="d-block text-muted">
               {{ task.due_date }} {{ task.due_time }}
             </small>
           </div>
           <div>
-            <a
-              href="/toggle_status/{{ task.id }}"
-              class="btn btn-sm btn-outline-secondary"
-            >
-              {% if task.status == 'Pending' %}Complete{% else %}↩Undo{% endif
-              %}
+            <a href="/toggle_status/{{ task.id }}" class="btn-status">
+              {% if task.status == 'Pending' %}Complete{% else %}Undo{% endif %}
             </a>
-            <a href="/edit/{{ task.id }}" class="btn btn-sm btn-warning"
-              >Edit</a
-            >
-            <a href="/delete/{{ task.id }}" class="btn btn-sm btn-danger"
-              >Delete</a
-            >
+            <a href="/edit/{{ task.id }}" class="btn-edit">Edit</a>
+            <a href="/delete/{{ task.id }}" class="btn-delete">Delete</a>
           </div>
         </li>
         {% else %}

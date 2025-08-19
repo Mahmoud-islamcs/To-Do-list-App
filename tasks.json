@@ -18,17 +18,25 @@
     {
         "id": 3,
         "name": "Task 3",
-        "description": "Watch the third 3 videos on Youtube https://www.youtube.com/playlist?list=PLs4xH3XPr55guaS_NY0SQ6dQabpXK0xQ6",
+        "description": "Watch the third 5 videos on the course",
         "due_date": "2025-08-19",
-        "due_time": "15:00",
+        "due_time": "18:00",
         "status": "Pending"
     },
     {
         "id": 4,
         "name": "Task 4",
-        "description": "Complete the OOP CPP Project ( Hospital Management System ",
+        "description": "Complete OOP CPP Project ( Hospital Management System )",
         "due_date": "2025-08-19",
-        "due_time": "17:00",
+        "due_time": "18:00",
+        "status": "Pending"
+    },
+    {
+        "id": 5,
+        "name": "Task 5",
+        "description": "Solve LeetCode daily Problem",
+        "due_date": "2025-08-19",
+        "due_time": "20:00",
         "status": "Pending"
     }
 ]

@@ -39,12 +39,17 @@
           </p>
 
           <div class="mt-4">
-            <a href="/" class="btn btn-secondary">Back</a>
-            <a href="/edit/{{ task.id }}" class="btn btn-warning">Edit</a>
-            <a href="/delete/{{ task.id }}" class="btn btn-danger">Delete</a>
-            <a href="/toggle_status/{{ task.id }}" class="btn btn-success">
-              {{ ' Mark as Pending' if task.status == 'Completed' else '✅ Mark
-              as Completed' }}
+            <a href="/" class="btn-action btn-back">Back</a>
+            <a href="/edit/{{ task.id }}" class="btn-action btn-edit">Edit</a>
+            <a href="/delete/{{ task.id }}" class="btn-action btn-delete"
+              >Delete</a
+            >
+            <a
+              href="/toggle_status/{{ task.id }}"
+              class="btn-action btn-toggle"
+            >
+              {{ ' Mark as Pending' if task.status == 'Completed' else 'Mark as
+              Completed' }}
             </a>
           </div>
         </div>
